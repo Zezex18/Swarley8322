@@ -5,3 +5,5 @@ st.write("""
 # My first app
 Hello, you smelly *world!*
 """)
+
+st.write("""I AM YOUR NEW RULER""")
