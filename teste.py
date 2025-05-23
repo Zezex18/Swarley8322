@@ -8,4 +8,4 @@ st.write("""
 ##Subtítulo
 """)
 
-st.write("""I AM YOUR NEW RULER >:3""")
+st.write("""Meu app primeiro""")
