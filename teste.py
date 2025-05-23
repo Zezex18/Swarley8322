@@ -6,4 +6,4 @@ st.write("""
 Hello, you smelly *world!*
 """)
 
-st.write("""I AM YOUR NEW RULER""")
+st.write("""I AM YOUR NEW RULER >:3""")
