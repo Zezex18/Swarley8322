@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.write('José')
+st.write('José Maurício')
 
 st.write("""
 # Minha Primeira Aplicação
