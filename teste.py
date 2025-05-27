@@ -10,6 +10,5 @@ st.write("""
 
 st.write("""Seja muito bem vindo, fique à vontade ;)""")
 
-imagem_gif = st.image("astro-astrobot.gif")
 
-st.image(imagem_gif)
+st.markdown("![Alt Text](astro-astrobot.gif)")
