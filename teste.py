@@ -12,10 +12,6 @@ st.write("""
 
 st.write("""Seja muito bem vindo, fique à vontade ;)""")
 
+imagem_gif = st.image("astro-astrobot.gif")
 
-st.markdown(
-    """
-    <img src="astro-astrobot.gif" alt="GIF" width="200">
-    """,
-    unsafe_allow_html=True,
-)
+st.image(imagem_gif)
