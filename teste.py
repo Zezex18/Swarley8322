@@ -11,4 +11,4 @@ st.write("""
 st.write("""Seja muito bem vindo, fique à vontade ;)""")
 
 
-st.markdown("(astro-astrobot.gif)")
+st.markdown("astro-astrobot.gif")
