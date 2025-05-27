@@ -7,4 +7,4 @@ st.write("""
 # Minha Primeira Aplicação
 """)
 
-st.write("""Seja muito bem vindo, fique a vontade ;)""")
+st.write("""Seja muito bem vindo, fique à vontade ;)""")
