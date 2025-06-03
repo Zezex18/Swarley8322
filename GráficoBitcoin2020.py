@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-import plotly.express as px
 
 url = "https://raw.githubusercontent.com/plotly/datasets/master/bitcoin.csv"
 df = pd.read_csv(url)
