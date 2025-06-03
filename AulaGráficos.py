@@ -6,4 +6,4 @@ try:
 except:
   df = pd.read_csv('https://perfil-i.ibict.br/media/uploads/user_sum.csv')
 
-st.bar_chart(df, x='month', y='preço_fechamento')
+st.bar_chart(df, x='month', y='total')
