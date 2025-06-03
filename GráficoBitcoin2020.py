@@ -7,4 +7,4 @@ try:
 except:
   df = pd.read_csv('BTC-2020.csv')
 
-st.bar_chart(df, x='', y='t')
+st.line_chart(df, x='Data', y='Preço Fechamento')
