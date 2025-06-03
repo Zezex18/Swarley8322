@@ -1,18 +1,23 @@
 import pandas as pd
 import streamlit as st
+import numpy as np
+import plotly.express as px
 
-url = "https://raw.githubusercontent.com/plotly/datasets/master/bitcoin.csv"
-df = pd.read_csv(url)
+dates = pd.date_range(start="2023-01-01", periods=100)
+prices = np.random.normal(loc=30000, scale=5000, size=100).cumsum()  # Simula tendência
+volumes = np.random.randint(1000, 50000, size=100)
 
-# Converter data
-df['Date'] = pd.to_datetime(df['Date'])
+df = pd.DataFrame({
+    "Date": dates,
+    "Close": prices,
+    "Volume": volumes,
+    "Change %": np.random.uniform(-5, 5, 100)
+})
 
-# Dashboard
-st.title("💰 Análise de Bitcoin (Dataset Simplificado)")
+st.title("📊 Bitcoin Fake Data (Para Teste Rápido)")
 
-# Gráfico 1: Preço de fechamento
-st.subheader("Preço Histórico (USD)")
-fig = px.line(df, x='Date', y='Close', 
-              labels={'Close': 'Preço (USD)', 'Date': 'Data'},
-              color_discrete_sequence=['#00BFFF'])  # Cor azul
-st.plotly_chart(fig, use_container_width=True)
+st.subheader("Preço Simulado (USD)")
+fig = px.line(df, x="Date", y="Close", 
+              labels={"Close": "Preço (USD)"},
+              color_discrete_sequence=["#00BFFF"])
+st.plotly_chart(fig)
