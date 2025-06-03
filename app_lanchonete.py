@@ -3,7 +3,6 @@ import streamlit as st
 
 # Configuração inicial
 st.title("🍔 Análise de Vendas - Lanchonete")
-st.write("Este é um exemplo **100% testado**. Siga os passos abaixo:")
 
 # 1. Ler o CSV
 try:
