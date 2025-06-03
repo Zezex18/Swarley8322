@@ -4,6 +4,6 @@ import streamlit as st
 try:
   tot_registros = df.count()['total']
 except:
-  df = pd.read_csv('BTC-2020min.csv.zip')
+  df = pd.read_csv('https://perfil-i.ibict.br/media/uploads/user_sum.csv')
 
-st.bar_chart(df, x='data', y='preço_fechamento')
+st.bar_chart(df, x='month', y='preço_fechamento')
