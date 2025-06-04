@@ -21,7 +21,7 @@ try:
     df["Faturamento"] = df["Quantidade"] * df["Preco"]  # Calcula o faturamento
     faturamento_por_item = df.groupby("Item")["Faturamento"].sum()
     # 1. Definir cores específicas para cada item (em ordem alfabética)
-cores_personalizadas = {
+    cores_personalizadas = {
     "Coca-Cola": "#FF0000",  # Vermelho
     "Suco": "#FFA500",       # Laranja
     "X-Bacon": "#8B4513",    # Marrom
