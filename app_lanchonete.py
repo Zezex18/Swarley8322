@@ -34,7 +34,7 @@ try:
     
     # 3. Plotar o gráfico
     fig, ax = plt.subplots()
-    fat_por_item.plot.pie(
+    faturamento_por_item.plot.pie(
         autopct="%.1f%%",
         colors=cores,
         startangle=90,        # Começa a pizza no topo
