@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 # Configuração inicial
 st.title("🍔 Análise de Vendas - Lanchonete")
@@ -19,7 +20,30 @@ try:
     st.subheader("Faturamento por Item")
     df["Faturamento"] = df["Quantidade"] * df["Preco"]  # Calcula o faturamento
     faturamento_por_item = df.groupby("Item")["Faturamento"].sum()
-    st.pyplot(faturamento_por_item.plot.pie(autopct="%.1f%%").figure)
+    # 1. Definir cores específicas para cada item (em ordem alfabética)
+cores_personalizadas = {
+    "Coca-Cola": "#FF0000",  # Vermelho
+    "Suco": "#FFA500",       # Laranja
+    "X-Bacon": "#8B4513",    # Marrom
+    "X-Salada": "00FF00"     # Verde
+}
+
+# 2. Extrair os itens e as cores na ordem correta
+itens_ordenados = sorted(faturamento_por_item.index)
+cores = [cores_personalizadas[item] for item in itens_ordenados]
+
+# 3. Plotar o gráfico
+fig, ax = plt.subplots()
+fat_por_item.plot.pie(
+    autopct="%.1f%%",
+    colors=cores,
+    startangle=90,        # Começa a pizza no topo
+    wedgeprops={"edgecolor": "white", "linewidth": 1},  # Bordas brancas
+    textprops={"fontsize": 10, "color": "black"},       # Cor do texto
+    ax=ax
+)
+ax.set_ylabel("")  # Remove o label do eixo Y (que aparece por padrão)
+st.pyplot(fig)
 
 except FileNotFoundError:
     st.error("Erro: Arquivo 'lanchonete.csv' não encontrado. Verifique se:")
