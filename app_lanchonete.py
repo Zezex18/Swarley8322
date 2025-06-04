@@ -26,24 +26,24 @@ try:
     "Suco": "#FFA500",       # Laranja
     "X-Bacon": "#8B4513",    # Marrom
     "X-Salada": "#00FF00"    # Verde
-}
-
-# 2. Extrair os itens e as cores na ordem correta
-itens_ordenados = sorted(faturamento_por_item.index)
-cores = [cores_personalizadas[item] for item in itens_ordenados]
-
-# 3. Plotar o gráfico
-fig, ax = plt.subplots()
-fat_por_item.plot.pie(
-    autopct="%.1f%%",
-    colors=cores,
-    startangle=90,        # Começa a pizza no topo
-    wedgeprops={"edgecolor": "white", "linewidth": 1},  # Bordas brancas
-    textprops={"fontsize": 10, "color": "black"},       # Cor do texto
-    ax=ax
-)
-ax.set_ylabel("")  # Remove o label do eixo Y (que aparece por padrão)
-st.pyplot(fig)
+    }
+    
+    # 2. Extrair os itens e as cores na ordem correta
+    itens_ordenados = sorted(faturamento_por_item.index)
+    cores = [cores_personalizadas[item] for item in itens_ordenados]
+    
+    # 3. Plotar o gráfico
+    fig, ax = plt.subplots()
+    fat_por_item.plot.pie(
+        autopct="%.1f%%",
+        colors=cores,
+        startangle=90,        # Começa a pizza no topo
+        wedgeprops={"edgecolor": "white", "linewidth": 1},  # Bordas brancas
+        textprops={"fontsize": 10, "color": "black"},       # Cor do texto
+        ax=ax
+    )
+    ax.set_ylabel("")  # Remove o label do eixo Y (que aparece por padrão)
+    st.pyplot(fig)
 
 except FileNotFoundError:
     st.error("Erro: Arquivo 'lanchonete.csv' não encontrado. Verifique se:")
