@@ -25,8 +25,8 @@ cores_personalizadas = {
     "Coca-Cola": "#FF0000",  # Vermelho
     "Suco": "#FFA500",       # Laranja
     "X-Bacon": "#8B4513",    # Marrom
-    "X-Salada": "00FF00"    # Verde
-   }
+    "X-Salada": "#00FF00"    # Verde
+}
 
 # 2. Extrair os itens e as cores na ordem correta
 itens_ordenados = sorted(faturamento_por_item.index)
