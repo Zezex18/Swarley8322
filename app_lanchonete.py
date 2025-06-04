@@ -20,6 +20,7 @@ try:
     st.subheader("Faturamento por Item")
     df["Faturamento"] = df["Quantidade"] * df["Preco"]  # Calcula o faturamento
     faturamento_por_item = df.groupby("Item")["Faturamento"].sum()
+    st.subheader("Faturamento por Item (Cores Customizadas)")
     # 1. Definir cores específicas para cada item (em ordem alfabética)
 cores_personalizadas = {
     "Coca-Cola": "#FF0000",  # Vermelho
